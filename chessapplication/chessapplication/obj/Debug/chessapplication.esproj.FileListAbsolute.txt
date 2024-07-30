@@ -1,0 +1,4 @@
+C:\Users\willi\Desktop\dissGitRepo\chessapplication\chessapplication\obj\Debug\chessapplication.esproj.SuggestedBindingRedirects.cache
+C:\Users\willi\Desktop\dissGitRepo\chessapplication\chessapplication\obj\Debug\chessapplication.esproj.CoreCompileInputs.cache
+C:\Users\willi\Desktop\chessApplication\chessapplication\chessapplication\obj\Debug\chessapplication.esproj.SuggestedBindingRedirects.cache
+C:\Users\willi\Desktop\chessApplication\chessapplication\chessapplication\obj\Debug\chessapplication.esproj.CoreCompileInputs.cache

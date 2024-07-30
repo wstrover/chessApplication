@@ -1,0 +1,83 @@
+/* reviewBoard.css */
+
+.review-board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: auto repeat(8, 50px) auto;
+    grid-template-rows: auto repeat(8, 50px) auto;
+    gap: 2px;
+    background-color: black; 
+    padding: 2px; 
+}
+
+.label-row, .board-row {
+    display: contents;
+}
+
+.rank-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    color: white;
+    text-align: center;
+}
+
+.file-label {
+    font-weight: bold;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+}
+
+.label-placeholder {
+    width: 50px;
+    height: 50px;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .square.dark {
+        background-color: #769656;
+    }
+
+    .square.light {
+        background-color: #eeeed2;
+    }
+
+.piece {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+    .controls button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }

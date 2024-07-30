@@ -1,0 +1,66 @@
+{
+  "name": "chessapplication",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.83",
+    "@types/react": "^18.2.58",
+    "@types/react-dom": "^18.2.19",
+    "axios": "^1.6.8",
+    "child_process": "^1.0.2",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
+    "nodejs": "^0.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-refresh": "^0.14.2",
+    "react-scripts": "5.0.1",
+    "stockfish": "^16.0.0",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run start-server\" \"npm run start1\"",
+    "start1": "react-scripts start",
+    "start:proxy": "concurrently \"npm run start-server\" \"npm run start\"",
+    "start-server": "node src/Controller/stockfishServer.js",
+    "start:both": "concurrently \"npm run start-server\" \"npm start\"",
+    "start-server1": "node --inspect src/server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "stop": "powershell -command \"Stop-Process -Id (Get-NetTCPConnection -LocalPort 5050).OwningProcess -Force; Stop-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess -Force\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "eslint-config-react-app": "^7.0.1",
+    "jest-editor-support": "^31.1.2",
+    "react-scripts": "5.0.1"
+  },
+  "plugins": [
+    "react-refresh/babel"
+  ],
+  "proxy": "http://localhost:5050"
+}
