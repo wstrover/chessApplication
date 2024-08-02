@@ -1,5 +1,6 @@
-import React from 'react';
-import { render, screen, waitFor, act } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+import { act } from 'react';
+
 import App from './App';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 

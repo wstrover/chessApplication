@@ -86,7 +86,6 @@ export const removeFromWaitingList = async (userId: string) => {
 
 export const checkOrCreateGame = async (playerOneId: string, playerTwoId: string): Promise<string> => {
     try {
-        //console.log("1");
         const gameCollectionRef = collection(db, 'games');
         const gameQuery = query(gameCollectionRef, orderBy('id', 'desc'), limit(1));
         const gameSnapshot = await getDocs(gameQuery);
@@ -98,7 +97,6 @@ export const checkOrCreateGame = async (playerOneId: string, playerTwoId: string
         } else {
             newGameId = '01'; 
         }
-        //console.log("2");
         const newGame = {
             id: newGameId,
             players: {
@@ -109,11 +107,8 @@ export const checkOrCreateGame = async (playerOneId: string, playerTwoId: string
             fenHistory: ["rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"],
             gameStatus: 'ongoing'
         };
-        //console.log("3");
         await setDoc(doc(db, 'games', newGameId), newGame);
-        //console.log("4");
         const gameRef = ref(realDB, 'games/' + newGameId);
-        //console.log("5");
         await set(gameRef, {
             gameInfo: {
                 players: {
@@ -125,7 +120,6 @@ export const checkOrCreateGame = async (playerOneId: string, playerTwoId: string
             },
             boardState: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
         });
-        //console.log("10");
         return newGameId; 
     } catch (error) {
         console.error('Detailed Error: ', error);

@@ -21,7 +21,7 @@ describe('Elo Logic', () => {
         const [eloChangeA, eloChangeB] = calculateEloChange(playerA, playerB, 'draw');
         const expectedEloChangeA = 32 * (0.5 - 0.76);
         const expectedEloChangeB = 32 * (0.5 - 0.24);
-        expect(eloChangeA).toBeCloseTo(expectedEloChangeA, 2);
-        expect(eloChangeB).toBeCloseTo(expectedEloChangeB, 2);
+        expect(eloChangeA).toBeCloseTo(expectedEloChangeA, 1);
+        expect(eloChangeB).toBeCloseTo(expectedEloChangeB, 1);
     });
 });

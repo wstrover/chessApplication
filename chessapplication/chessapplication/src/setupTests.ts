@@ -10,3 +10,8 @@ import '@testing-library/jest-dom/extend-expect';
 if (typeof global.TextDecoder === 'undefined') {
     global.TextDecoder = require('util').TextDecoder;
 }
+
+const { TextEncoder, TextDecoder } = require('util');
+
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;

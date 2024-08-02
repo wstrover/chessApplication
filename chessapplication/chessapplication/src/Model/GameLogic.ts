@@ -49,7 +49,7 @@ export class GameLogic {
             if (!kingPos) {
                 return false; 
             }
-
+            
             return !this.isKingDirectlyThreatened(kingPos, tempBoard, currentPlayer);
         });
 

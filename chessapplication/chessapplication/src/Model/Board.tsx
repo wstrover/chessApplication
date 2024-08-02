@@ -106,7 +106,7 @@ const Board: React.FC<BoardProps> = ({ propGameId, propUserId, initialSetup }) =
     useEffect(() => {
         //if (gameMode === GameMode.LocalSingleplayer || gameMode === GameMode.OnlineMultiplayer) return;
         
-        //if (gameMode !== GameMode.SingleplayerAI) return;
+        if (gameMode !== GameMode.SingleplayerAI) return;
         console.log("intialise Stockfish");
         const startEngine = async () => {
             await initializeEngine();
@@ -174,6 +174,7 @@ const Board: React.FC<BoardProps> = ({ propGameId, propUserId, initialSetup }) =
 
         fetchStockfishMove();
     }, [currentPlayer, board, currentFENNotation, gameMode, userColor]);
+
 
 
 
